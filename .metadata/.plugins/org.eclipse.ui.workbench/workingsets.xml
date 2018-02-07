@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1518008265404_0" label="[BackendAdapter]" name="[BackendAdapter]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/BackendAdapter" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1518008265404_1" label="[ConsumerAdapter]" name="[ConsumerAdapter]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ConsumerAdapter" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1518008265404_2" label="[FrameworkLib]" name="[FrameworkLib]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/FrameworkLib" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1518008265404_3" label="[TemperatureConverter]" name="[TemperatureConverter]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TemperatureConverter" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1518008265420_4" label="[Test]" name="[Test]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Test" type="4"/>
+</workingSet>
+<workingSet editPageId="com.ibm.etools.mft.navigator.BrokerWorkingSet.AppLib" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1518008265420_5" label="[mqBackend]" name="[mqBackend]">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/mqBackend" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1518010547700_6" label="Window Working Set" name="Aggregate for window 1518010547699"/>
+</workingSetManager>

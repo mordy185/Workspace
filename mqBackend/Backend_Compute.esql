@@ -1,0 +1,29 @@
+
+
+CREATE COMPUTE MODULE Backend_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		 CALL CopyMessageHeaders();
+		 set OutputRoot.MQMD.Report = MQRO_PASS_CORREL_ID;
+		-- CALL CopyEntireMessage();
+		SET OutputRoot.XMLNSC.Becustdt.Name = 'Mohamad';
+		SET OutputRoot.XMLNSC.Becustdt.NatId = InputRoot.XMLNSC.Becustdtreq.NatId;
+		SET OutputRoot.XMLNSC.Becustdt.NatExpdt = '2018-01-01';
+		--SET OutputRoot.MQMD.ReplyToQ = 'BE_GET_CUST_RS';
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;

@@ -1,0 +1,38 @@
+
+
+CREATE COMPUTE MODULE POC_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+	 CALL CopyMessageHeaders();
+	 
+	 
+	 ---
+	 ---
+	 ---
+	 
+	 ---
+	 
+	 ---- load static data
+	 
+	 set OutputRoot.MQMD.ReplyToQ = 'POC_resp_queue_in';
+	 set OutputLocalEnvironment.destinationlist[1] = 'Back_end_queue_in';
+	 
+	 
+		-- CALL CopyEntireMessage();
+		RETURN TRUE;
+	END;
+
+	CREATE PROCEDURE CopyMessageHeaders() BEGIN
+		DECLARE I INTEGER 1;
+		DECLARE J INTEGER;
+		SET J = CARDINALITY(InputRoot.*[]);
+		WHILE I < J DO
+			SET OutputRoot.*[I] = InputRoot.*[I];
+			SET I = I + 1;
+		END WHILE;
+	END;
+
+	CREATE PROCEDURE CopyEntireMessage() BEGIN
+		SET OutputRoot = InputRoot;
+	END;
+END MODULE;
